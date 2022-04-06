@@ -10,14 +10,85 @@
 :root {
     --Soft-blue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
-    --Very-dark-blue: hsl(217, 54%, 11%);   /*(main-BG)*/
-    --Very-dark-blue: hsl(216, 50%, 16%);   /*(card BG)*/
-    --Very-dark-blue: hsl(215, 32%, 27%);   /*(line)*/
+    --Very-dark-blue-main: hsl(217, 54%, 11%);   /*(main-BG)*/
+    --Very-dark-blue-card: hsl(216, 50%, 16%);   /*(card BG)*/
+    --Very-dark-blue-line: hsl(215, 32%, 27%);   /*(line)*/
     --White: hsl(0, 0%, 100%);
 
     --Name-stats-Font-size: 18px;
 }
 html,body
 {
+    margin: 0;
+    box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
+}
+body
+{
+    background: var(--Very-dark-blue-main);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.NFT
+{
+    border-radius: 8px;
+    width: 85%;
+    margin: 0 auto;
+    background-color: var(--Very-dark-blue-card);
+    overflow: hidden;
+}
+.NFT-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.NFT-top img
+{
+    display: flex;
+    border-radius: 8px;
+    margin: 25px auto;
+    width: 85%;
+    overflow: hidden;
+}
+.NFT-datos-general > div span:nth-child(1)
+{
+    /*font-size: var(--Name-stats-Font-size);*/
+    font-weight: 600;
+    margin-left: 25px;
+    color: var(--White);
+    /*font-size: 25px;*/
+}
+.NFT-datos-general p
+{
+    /*font-size: var(--Name-stats-Font-size);*/
+    font-weight: 300;
+    margin-left: 25px;
+    margin-right: 5px;
+    color: var(--Soft-blue);
+}
+.NFT-datos-especificos
+{
+    margin-left: 20px;
+    margin-right: 15px;
+    display: flex;
+}
+.NFT-datos-especificos > div span:nth-child(1)
+{
+    color: var(--Cyan);
+    
+}
+.NFT-datos-especificos > div span:nth-child(2)
+{
+    color: var(--Soft-blue);
+    align-items: center;
+}
+.NFT-datos-Creador > div span:nth-child(1)
+{
+    color: var(--Soft-blue);
+}
+.NFT-datos-Creador > div span:nth-child(2)
+{
+    color: var(--White);
 }
