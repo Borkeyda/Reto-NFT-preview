@@ -10,79 +10,119 @@
 :root {
     --Soft-blue: hsl(215, 51%, 70%);
     --Cyan: hsl(178, 100%, 50%);
-    --Very-dark-blue-main: hsl(217, 54%, 11%);   /*(main-BG)*/
-    --Very-dark-blue-card: hsl(216, 50%, 16%);   /*(card BG)*/
-    --Very-dark-blue-line: hsl(215, 32%, 27%);   /*(line)*/
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    /*(main-BG)*/
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    /*(card BG)*/
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    /*(line)*/
     --White: hsl(0, 0%, 100%);
 
     --Name-stats-Font-size: 18px;
 }
-html,body
-{
+
+html, body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
-body
-{
+
+body {
     background: var(--Very-dark-blue-main);
     height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
-.NFT
-{
+
+.NFT {
     border-radius: 8px;
     width: 85%;
     margin: 0 auto;
     background-color: var(--Very-dark-blue-card);
     overflow: hidden;
 }
+
 .NFT-top {
     position: relative;
     display: flex;
     justify-content: center;
 }
-.NFT-top img
-{
+
+.NFT-top img {
     display: flex;
     border-radius: 8px;
     margin: 25px auto;
     width: 85%;
     overflow: hidden;
 }
-.NFT-datos-general > div span:nth-child(1)
-{
-    /*font-size: var(--Name-stats-Font-size);*/
-    font-weight: 600;
+
+.NFT-datos-general>div span:nth-child(1) {
+    font-size: var(--Name-stats-Font-size);
+    font-weight: 800;
     margin-left: 25px;
     color: var(--White);
     /*font-size: 25px;*/
 }
-.NFT-datos-general p
-{
-    /*font-size: var(--Name-stats-Font-size);*/
+
+.NFT-datos-general p {
+    font-size: 17px;
     font-weight: 300;
     margin-left: 25px;
-    margin-right: 5px;
+    margin-right: 10px;
     color: var(--Soft-blue);
+    line-height: 25px;
 }
-.NFT-datos-especificos
-{
-    margin-left: 20px;
-    margin-right: 15px;
+
+.NFT-datos-especificos {
     display: flex;
+    justify-content: space-around;
 }
-.NFT-datos-especificos > div span:nth-child(1)
-{
+
+.NFT-datos-especificos-costo {
     color: var(--Cyan);
-    
+    font-weight: 400;
+    display: flex;
+
 }
-.NFT-datos-especificos > div span:nth-child(2)
-{
+
+.NFT-datos-especificos-costo img {
+    margin-bottom: -2px;
+}
+
+.NFT-datos-especificos-tiempo {
     color: var(--Soft-blue);
-    align-items: center;
+}
+
+.NFT-datos-especificos-tiempo img {
+    margin-bottom: -2px;
+}
+
+.NFT-datos-Creador {
+    display: flex;
+    border-top: 1px solid var(--Very-dark-blue-line);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.NFT-datos-Creador img {
+    border-radius: 80%;
+    border: 2px solid white;
+    overflow: hidden;
+    display: flex;
+    max-width: 70%;
+    max-width: 70%;
+    margin-top: 20px;
+    /*bottom: -53px;*/
+}
+.NFT-datos-Creador > div:nth-child(1)
+{
+    width: 70px;
+    height: 90px;
+}
+.NFT-datos-Creador > div:nth-child(2)
+{
+    margin-top: 35px;
 }
 .NFT-datos-Creador > div span:nth-child(1)
 {
