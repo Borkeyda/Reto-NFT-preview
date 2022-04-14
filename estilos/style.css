@@ -21,32 +21,77 @@ html, body {
 body {
     background: var(--Very-dark-blue-main);
     height: 100vh;
-    display: flex;
     justify-content: center;
-    flex-direction: column;
 }
-
-.NFT {
+.button-container{
+    margin-top: 20px;
+    height: 36px;
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+}
+.button{
+    width: 100px;
+    border-radius: 5px;
+    border:1px solid black;
+    color: var(--White);
+    background-color:var(--Soft-blue);
+    cursor: pointer;
+}
+.button:hover{
+    color:var(--Very-dark-blackish-blue);
+    background-color: cyan;
+}
+.button:disabled{
+    opacity: 0.5;
+}
+.container-cards{
+    padding: 25px 25px 25px;
+    
+}
+.NFT_a {
     border-radius: 8px;
     width: 85%;
     margin: 0 auto;
     background-color: var(--Very-dark-blue-card);
     overflow: hidden;
 }
-
+    
 .NFT-top {
     position: relative;
     display: flex;
     justify-content: center;
 }
 
-.NFT-top img {
+.NFT-top img{
     display: flex;
     border-radius: 8px;
     margin: 25px auto;
     width: 85%;
     overflow: hidden;
     cursor: pointer;
+}
+.img-state{
+    position: absolute;
+    border-radius: 8px;
+    margin: 25px auto;
+    left: 25px;
+    height: 84%;
+    width: 85%;
+    background-color:hsla(178, 100%, 50%, 0.4);
+    display: none;
+}
+.img-state img{
+    display: flex;
+    border-radius: 8px;
+    margin: 100px auto;
+    width: 20%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.NFT-top:hover .img-state{
+    display: block;
+    opacity: 0.7;
 }
 
 .NFT-datos-general>div span:nth-child(1) {
